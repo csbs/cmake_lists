@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 3.9.4)
+project(Tinyhttpd)
+set(CMAKE_C_STANDARD  99)
+
+# Add main.cpp file of project root directory as source file
+set(SERVER_FILES httpd.c)
+set(CLIENT_FILES simpleclient.c)
+
+# Add executable target with source files listed in SOURCE_FILES variable
+add_executable(httpd ${SERVER_FILES})
+add_executable(client ${CLIENT_FILES})
